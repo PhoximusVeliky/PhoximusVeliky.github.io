@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Обратная связь</title>
+</head>
+<body>
+    <h1>Обратная связь</h1>
+    <form id="feedback-form">
+        <label for="name">Имя:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Сообщение:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+        <button type="submit">Отправить</button>
+    </form>
+    <a href="index.html">← Вернуться на главную</a>
+
+    <script>
+        document.getElementById('feedback-form').onsubmit = function(e) {
+            e.preventDefault();
+            alert('Форма отправлена! (в учебных целях)');
+        };
+    </script>
+</body>
+</html>
